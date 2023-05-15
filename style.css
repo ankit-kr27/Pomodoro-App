@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@400;600;700&display=swap');
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: 'Arvo', serif;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --dark: #2A2F4F;
+    --dawn: #917FB3;
+    --lav: #E5BEEC;
+    --light: #FDE2F3;
+}
+
+body{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+#headline{
+    position: absolute;
+    top: 0;
+    font-weight: 700;
+    font-size: 48px;
+    margin-bottom: 2rem;
+}
+
+input.hide{
+    display: none;
+}
+
+.main{
+    border: #917FB3 2px solid;
+    padding: 3rem;
+    border-radius: 2rem;
+}
+
+.mode, .duration{
+    display: flex;
+    justify-content:space-around;
+    background-color: var(--dawn);
+    /* align-items: center; 
+    height: 2.5rem;
+    margin-bottom: 1rem; */
+    margin: 2rem;
+    border-radius: 2.5rem;
+    overflow: hidden;   
+    /* this will hide the portions of the inner child be hidden from coming out of the parent element */
+}
+
+
+.radio-label{
+    text-align: center;
+    /* background-color: var(--dawn); */
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.radio-label:not(:last-of-type){
+    border-right: 2px solid var(--dark);
+}
+
+.radio-label:hover{
+    background-color: var(--lav);
+}
+
+.clock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 11rem;
+    border-radius: 10rem;
+    border: var(--lav) 4px solid ;
+    border-color: var(--lav);
+}
+
+.clock div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.time{
+    font-size: 3rem;
+}
+
+.controls{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn{
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: none;
+
+    background-color: var(--dawn);
+    width: 4rem;
+}
+.btn:hover{
+    background-color: var(--lav);
+}
+input:checked + .radio-label{
+    background-color: var(--lav);
+    color: #2A2F4F;
+    transition: background 0.2s;
+}
+.hide{
+    display: none;
+}
+

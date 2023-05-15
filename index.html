@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="headline">Pomodoro</h1>
+    <div class="main">
+        <div class="mode">
+            <input class="hide" type="radio" name="work-break" id="work">
+            <label for="work" class="radio-label">Work</label>
+            <input class="hide" type="radio" name="work-break" id="break">
+            <label for="break" class="radio-label">Break</label>
+        </div>
+        <div class="work-container">
+            <div class="duration">
+                <input class="hide work-time" type="radio" name="work-duration" id="duration-15" value="15">
+                <label for="duration-15" class="radio-label">15</label>
+                <input class="hide work-time" type="radio" name="work-duration" id="duration-25" value="25">
+                <label for="duration-25" class="radio-label">25</label>
+                <input class="hide work-time" type="radio" name="work-duration" id="duration-35" value="35">
+                <label for="duration-35" class="radio-label">35</label>
+            </div>
+
+        </div>
+
+        <div class="break-container">
+            <div class="duration">
+                <input class="hide break-time"type="radio" id="duration-short" value="5" name="break-duration">
+                <label for="duration-short" class="radio-label">Short</label>
+                <input class="hide break-time"type="radio" name="break-duration" id="duration-long" value="30">
+                <label for="duration-long" class="radio-label">Long</label>
+            </div>
+        </div>
+        <div class="clock">
+            <div>
+                <h1 class="time"><span id="min">00</span>:<span id="seconds">00</span></h1>
+            </div>
+        </div>
+        <div class="controls">
+            <button class="btn play hide" disabled><img src="Icons/bx-play.svg" alt="play"></button>
+            <button class="btn pause hide" disabled><img src="Icons/bx-pause.svg" alt="pause"></button>
+            <button class="btn repeat hide" disabled><img src="Icons/bx-repeat.svg" alt="repeat"></button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
