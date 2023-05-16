@@ -1,70 +1,3 @@
-// const workButton = document.querySelector("#work")
-// const breakButton = document.querySelector("#break")
-
-// const workContainer = document.querySelector(".work-container")
-// const breakContainer = document.querySelector(".break-container")
-
-// const workTimes = document.getElementsByClassName("work-time")
-// const breakTimes = document.querySelectorAll(".break-time")
-// const buttons = document.getElementsByClassName('btn');
-
-// const minuteDisplay = document.getElementById("min")
-// const secondDisplay = document.getElementById('seconds')
-
-// let seconds=00
-// startDefault()
-
-// function startDefault(){
-//     breakContainer.classList.add("hide")
-//     workContainer.classList.remove("hide")
-//     workButton.setAttribute("checked", "")
-//     workTimes[1].setAttribute("checked",'')
-//     buttons[0].classList.remove("hide")
-//     seconds = 25*60
-//     setTimeDisplay(seconds)
-// }
-
-// for(let time of workTimes){
-//     time.addEventListener('click', ()=>{
-//         if(time.checked){
-//             seconds = time.value*60
-//             setTimeDisplay(seconds)
-//         }
-//     })
-// }
-
-// buttons[0].addEventListener('click', ()=>{
-//     countDown()
-// })
-
-// function countDown(){
-//     let tempSeconds = seconds
-//     buttons[0].classList.add('hide')
-//     buttons[1].classList.remove('hide')
-//     let id = setInterval(()=>{
-//        tempSeconds-=1; 
-//        setTimeDisplay(tempSeconds)
-//     }, 1000)
-//     // setTimeout(()=>{
-//     //     clearInterval(id)
-//     // }, seconds)
-// }
-
-// function setTimeDisplay(tempSeconds){
-//     minuteDisplay.innerText = Math.floor(tempSeconds/60);
-//     secondDisplay.innerText = tempSeconds%60;
-// }
-
-// workButton.addEventListener('click', startDefault);
-
-// breakButton.addEventListener('click', ()=>{
-//     workContainer.classList.add("hide")
-//     breakContainer.classList.remove("hide")
-//     breakTimes[0].setAttribute("checked", "")
-// })
-
-// ***********************************************
-
 const workButton = document.querySelector("#work")
 const breakButton = document.querySelector("#break")
 
@@ -127,12 +60,15 @@ function workMode(selectedTimeElement){    // ****
     buttons[0].classList.remove("hide") // play button
     buttons[0].removeAttribute('disabled')
     
-    buttons[0].addEventListener('click', ()=>{
-        countdownOn(countdownTime)
-        buttons[1].classList.remove('hide')
-        buttons[1].removeAttribute('disabled')
-    })
+    
 }
+
+buttons[0].addEventListener('click', ()=>{
+    console.log("I visited here")
+    countdownOn(countdownTime)
+    buttons[1].classList.remove('hide')
+    buttons[1].removeAttribute('disabled')
+})
 
 function breakMode(selectedTimeElement){   // ****
     currentMode = 'break';
@@ -145,15 +81,18 @@ function breakMode(selectedTimeElement){   // ****
     setDisplayTime(countdownTime)
     buttons[0].classList.remove("hide") // play button
     buttons[0].removeAttribute('disabled')
-    
-    buttons[0].addEventListener('click', ()=>{
-        buttons[1].classList.remove('hide')
-        buttons[1].removeAttribute('disabled')
-        countdownOn(countdownTime)
-    })
+      
 }
 
+// buttons[0].addEventListener('click', ()=>{
+//     buttons[1].classList.remove('hide')
+//     buttons[1].removeAttribute('disabled')
+//     countdownOn(countdownTime)
+// })
+
 function restartCurrentMode(){
+    buttons[2].setAttribute('disabled', '')  //reset
+    buttons[2].classList.add('hide')
     if(currentMode==='work'){workMode(currentSelectedTime)}
     else{breakMode(currentSelectedTime)}
 }
@@ -164,6 +103,7 @@ function setDisplayTime(displayTime){   // ****
 }
 
 function countdownOn(){ // ****
+    console.log("I'm inside countdown")
     for(let input of allInputs){
         input.disabled = true
     }
