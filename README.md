@@ -6,6 +6,9 @@
 
 The Pomodoro Web App is a productivity tool that helps you manage your time effectively using the Pomodoro Technique. It allows you to switch between work mode and break mode, enabling you to focus on your tasks during work intervals and take refreshing breaks during break intervals. The app is built using HTML, CSS, and JavaScript.
 
+## GitHub Pages link
+<a href="https://ankit-kr27.github.io/Pomodoro-App/">Pomodoro App Link</a>
+
 ## Features
 
 - Work Mode: Choose a time duration of 15, 25, or 35 minutes for focused work sessions.
@@ -13,7 +16,6 @@ The Pomodoro Web App is a productivity tool that helps you manage your time effe
 - User-friendly Interface: The app provides a clean and intuitive interface for a seamless user experience.
 - Timer Countdown: The app displays a countdown timer during both work and break sessions, keeping you aware of the remaining time.
 - Start, Pause, and Reset: Control the timer with convenient buttons to start, pause, and reset the current session.
-- Progress Tracking: Keep track of the number of completed work sessions, allowing you to monitor your productivity.
 
 ## Usage
 
