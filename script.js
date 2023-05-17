@@ -66,6 +66,8 @@ function workMode(selectedTimeElement){    // ****
 buttons[0].addEventListener('click', ()=>{
     console.log("I visited here")
     countdownOn(countdownTime)
+    buttons[0].classList.add('hide')
+    buttons[0].setAttribute('disabled', '')
     buttons[1].classList.remove('hide')
     buttons[1].removeAttribute('disabled')
 })
@@ -116,6 +118,10 @@ function countdownOn(){ // ****
             return
         }
         buttons[1].addEventListener('click', ()=>{
+            buttons[1].classList.add('hide')
+            buttons[1].setAttribute('disabled', '')
+            buttons[0].classList.remove('hide')
+            buttons[0].removeAttribute('disabled')
             clearInterval(id);
             return
         })
